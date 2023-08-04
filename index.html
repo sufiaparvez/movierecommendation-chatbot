@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+
+	<head>
+		<title>Movie Pitch</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://cdn.pixabay.com/photo/2013/07/13/12/43/girl-160172_640.png"
+		rel="stylesheet">
+		<link rel="stylesheet" href="index.css">
+	</head>
+
+	<body>
+		<header>
+			<img src="https://cdn.pixabay.com/photo/2013/07/13/12/43/girl-160172_640.png" alt="MoviePitch">
+			<a href="/"><span>Movie</span>Pitch</a>
+		</header>
+		<main>	
+			<!-- The Setup -->	
+			<section id="setup-container">
+				<div class="setup-inner">
+					<img src="https://img.freepik.com/free-vector/cute-rabbit-with-duck-working-laptop-cartoon-illustration_56104-471.jpg?w=740&t=st=1691116926~exp=1691117526~hmac=42db1be09ab29cddc8cf979fb2b0b9a6ff3212932c9cd96c6af4ff5f49b8e2ad">
+					<div class="speech-bubble-ai" id="speech-bubble-ai">
+						<p id="movie-boss-text">
+							Give me a one-sentence concept and I'll give you an eye-catching title, a synopsis the studios will love, a movie poster...
+							AND choose the cast!
+						</p>
+					</div>
+				</div>
+				<div class="setup-inner setup-input-container" id="setup-input-container">
+					<textarea id="setup-textarea" placeholder="An evil genius wants to take over the world using AI."></textarea>
+					<button class="send-btn" id="send-btn" aria-label="send">
+							<img src="https://cdn2.vectorstock.com/i/1000x1000/44/56/send-colorful-icon-symbol-premium-quality-vector-17404456.jpg" alt="send">
+					</button>
+				</div>
+			</section>	
+			<!-- The Output -->	
+			<section class="output-container" id="output-container">
+				<div id="output-img-container" class="output-img-container"></div>
+				<h1 id="output-title"></h1>
+				<h2 id="output-stars"></h2>
+				<p id="output-text"></p>
+				<img src="data:image/jpeg;base64,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">
+			</section>
+		</main>	
+		<footer>
+			&copy; 2023 MoviePitch All rights reserved
+		</footer>
+		<script type="module" src="index.js"></script>
+	</body>
+
+</html>
